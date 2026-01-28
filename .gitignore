@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.DS_Store
+Thumbs.db
+.env
+*.env
+config.json
+*.key
+*.pem
+*.crt
+.idea/
+.vscode/
+flask_session/
+venv/
+.venv/

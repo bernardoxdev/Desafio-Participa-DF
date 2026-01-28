@@ -1,0 +1,9 @@
+torch
+transformers
+scikit-learn
+numpy
+pandas
+tqdm
+brutils
+openpyxl
+spacy
