@@ -215,22 +215,4 @@ def analyze_text_multilabel(text, context_model):
     }
 
 if __name__ == "__main__":
-    BASE_DIR = os.path.dirname(__file__)
-
-    CSV_PATH = os.path.abspath(
-        os.path.join(BASE_DIR, "..", "data", "train", "pii_context.csv")
-    )
-
-    model = train_context_model(CSV_PATH)
-
-    texto = "Meu nome é Maria Silva, CPF 123.456.789-00, estou em tratamento de câncer."
-
-    result = detect_pii(texto, model)
-
-    print("\n🔎 DETECÇÃO:")
-    print(result)
-
-    print("\n🔐 TEXTO MASCARADO:")
-    print(mask_text(texto))
-
-    print(analyze_text_multilabel(texto, model))
+    pass
