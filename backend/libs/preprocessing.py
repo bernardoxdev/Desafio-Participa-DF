@@ -5,3 +5,6 @@ def clean_text(text: str) -> str:
     text = re.sub(r"\s+", " ", text)
     
     return text.strip()
+
+if __name__ == '__main__':
+    pass
