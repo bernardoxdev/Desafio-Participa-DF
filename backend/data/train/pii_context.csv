@@ -1,22 +1,41 @@
 text,label
-"Meu nome é João Silva e meu CPF é 123.456.789-00.",IDENTITY
-"Encaminho RG e CPF para atualização cadastral.",IDENTITY
-"Telefone para contato (61) 99876-5432.",IDENTITY
-"Solicito acesso ao processo SEI nº 00254-78541261/2018-95.",LEGAL
-"Requeiro cópia integral do processo administrativo disciplinar.",LEGAL
-"Gostaria de saber o andamento da denúncia registrada.",LEGAL
-"Solicito histórico de consumo de água do imóvel inscrição 157028-1.",FINANCIAL
-"Pedido de restituição de ICMS pago indevidamente.",FINANCIAL
-"Solicito esclarecimentos sobre multa aplicada ao imóvel.",LEGAL
-"Estou em tratamento de câncer e solicito isenção de imposto de renda.",HEALTH
-"Encaminho laudo médico para justificar afastamento.",HEALTH
-"Possuo doença crônica e preciso de licença médica.",HEALTH
-"Meu filho menor de idade necessita de vaga em creche.",CHILD
-"Gostaria de saber se há vaga em escola pública para meu filho.",CHILD
-"Solicito informações sobre vacinação infantil.",CHILD
-"Encaminho meus documentos pessoais para acesso ao processo.",IDENTITY
-"Solicito pagamento de nota fiscal pendente.",FINANCIAL
-"Pedido de auxílio saúde por dependente.",HEALTH
-"Solicito acesso externo ao processo SEI 0035-15329875/2017-75.",LEGAL
-"Gostaria de atualizar meus dados cadastrais no sistema.",IDENTITY
-
+Meu CPF é 123.456.789-00,PII
+O CPF informado foi 987.654.321-00 para cadastro,PII
+Documento CPF inválido informado no sistema,PII
+Preciso atualizar meu CPF no aplicativo,PII
+CPF cadastrado com sucesso,PII
+O CNPJ da empresa é 12.345.678/0001-90,PII
+Informe o CNPJ para continuar,PII
+"CNPJ inválido, verifique os dados",PII
+O sistema não reconheceu o CNPJ informado,PII
+CNPJ registrado na base de dados,PII
+Meu telefone é (11) 91234-5678,PII
+Telefone para contato: 21987654321,PII
+Informe um número de telefone válido,PII
+Contato telefônico não localizado,PII
+Telefone cadastrado com sucesso,PII
+Meu e-mail é joao.silva@email.com,PII
+O endereço de email foi registrado,PII
+E-mail inválido informado no formulário,PII
+Envie uma mensagem para o e-mail cadastrado,PII
+O e-mail de recuperação foi enviado,PII
+"Resido na Rua das Flores, número 123",PII
+O endereço foi atualizado no sistema,PII
+Endereço residencial não encontrado,PII
+Confirme seu endereço completo,PII
+O endereço informado está incompleto,PII
+"Olá, tudo bem com você?",NON_PII
+"Bom dia, gostaria de saber mais sobre o serviço",NON_PII
+Preciso de ajuda com o aplicativo,NON_PII
+O sistema apresentou lentidão hoje,NON_PII
+O atendimento foi excelente,NON_PII
+Qual o horário de funcionamento?,NON_PII
+Não consegui acessar minha conta,NON_PII
+O aplicativo está fora do ar,NON_PII
+Preciso redefinir minha senha,NON_PII
+O serviço está indisponível no momento,NON_PII
+Obrigado pelo suporte prestado,NON_PII
+Gostaria de fazer uma reclamação,NON_PII
+O problema foi resolvido rapidamente,NON_PII
+O atendimento demorou muito,NON_PII
+Estou satisfeito com a plataforma,NON_PII

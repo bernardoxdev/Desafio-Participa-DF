@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 from libs.preprocessing import clean_text
-from libs.pii_detector import train_context_model, load_context_model, process_text_row
+from libs.pii_detector import train_context_model, load_context_model, process_text_row, train_class_model, load_class_model
 
 BASE_DIR = os.path.dirname(__file__)
 
@@ -93,6 +93,11 @@ class DataAPI():
             context_model = load_context_model()
         except FileNotFoundError:
             context_model = train_context_model(os.path.join(BASE_DIR, "..", "data", "train", "dataset_context_1000.csv"))
+            
+        try:
+            clas_model = load_class_model()
+        except FileNotFoundError:
+            clas_model = train_class_model([os.path.join(BASE_DIR, "..", "data", "train", "context_pii_train.csv"), os.path.join(BASE_DIR, "..", "data", "train", "pii_context.csv")])
         
         results = df['texto_clean'].apply(
             lambda x: process_text_row(x, context_model)
