@@ -1,41 +1,175 @@
-text,label
-Meu CPF é 123.456.789-00,PII
-O CPF informado foi 987.654.321-00 para cadastro,PII
-Documento CPF inválido informado no sistema,PII
-Preciso atualizar meu CPF no aplicativo,PII
-CPF cadastrado com sucesso,PII
-O CNPJ da empresa é 12.345.678/0001-90,PII
-Informe o CNPJ para continuar,PII
-"CNPJ inválido, verifique os dados",PII
-O sistema não reconheceu o CNPJ informado,PII
-CNPJ registrado na base de dados,PII
-Meu telefone é (11) 91234-5678,PII
-Telefone para contato: 21987654321,PII
-Informe um número de telefone válido,PII
-Contato telefônico não localizado,PII
-Telefone cadastrado com sucesso,PII
-Meu e-mail é joao.silva@email.com,PII
-O endereço de email foi registrado,PII
-E-mail inválido informado no formulário,PII
-Envie uma mensagem para o e-mail cadastrado,PII
-O e-mail de recuperação foi enviado,PII
+text,label,
+"Meu CPF é 123.456.789-00",PII,
+"O CPF informado foi 987.654.321-00 para cadastro",PII,
+"Documento CPF inválido informado no sistema",NON_PII,
+"Preciso atualizar meu CPF no aplicativo",NON_PII,
+"CPF cadastrado com sucesso",NON_PII,
+"O CNPJ da empresa é 12.345.678/0001-90",PII,
+"Informe o CNPJ para continuar",NON_PII,
+"CNPJ inválido, verifique os dados",NON_PII
+"O sistema não reconheceu o CNPJ informado",NON_PII,
+"CNPJ registrado na base de dados",NON_PII,
+"Meu telefone é (11) 91234-5678",PII,
+"Telefone para contato: 21987654321",PII,
+"Informe um número de telefone válido",NON_PII,
+"Contato telefônico não localizado",NON_PII,
+"Telefone cadastrado com sucesso",NON_PII,
+"Meu e-mail é joao.silva@email.com",PII,
+"O endereço de email foi registrado",NON_PII,
+"E-mail inválido informado no formulário",NON_PII,
+"Envie uma mensagem para o e-mail cadastrado",NON_PII,
+"O e-mail de recuperação foi enviado",NON_PII,
 "Resido na Rua das Flores, número 123",PII
-O endereço foi atualizado no sistema,PII
-Endereço residencial não encontrado,PII
-Confirme seu endereço completo,PII
-O endereço informado está incompleto,PII
+"O endereço foi atualizado no sistema",NON_PII,
+"Endereço residencial não encontrado",NON_PII,
+"Confirme seu endereço completo",NON_PII,
+"O endereço informado está incompleto",NON_PII,
 "Olá, tudo bem com você?",NON_PII
 "Bom dia, gostaria de saber mais sobre o serviço",NON_PII
-Preciso de ajuda com o aplicativo,NON_PII
-O sistema apresentou lentidão hoje,NON_PII
-O atendimento foi excelente,NON_PII
-Qual o horário de funcionamento?,NON_PII
-Não consegui acessar minha conta,NON_PII
-O aplicativo está fora do ar,NON_PII
-Preciso redefinir minha senha,NON_PII
-O serviço está indisponível no momento,NON_PII
-Obrigado pelo suporte prestado,NON_PII
-Gostaria de fazer uma reclamação,NON_PII
-O problema foi resolvido rapidamente,NON_PII
-O atendimento demorou muito,NON_PII
-Estou satisfeito com a plataforma,NON_PII
+"Preciso de ajuda com o aplicativo",NON_PII,
+"O sistema apresentou lentidão hoje",NON_PII,
+"O atendimento foi excelente",NON_PII,
+"Qual o horário de funcionamento?",NON_PII,
+"Não consegui acessar minha conta",NON_PII,
+"O aplicativo está fora do ar",NON_PII,
+"Preciso redefinir minha senha",NON_PII,
+"O serviço está indisponível no momento",NON_PII,
+"Obrigado pelo suporte prestado",NON_PII,
+"Gostaria de fazer uma reclamação",NON_PII,
+"O problema foi resolvido rapidamente",NON_PII,
+"O atendimento demorou muito",NON_PII,
+"Estou satisfeito com a plataforma",NON_PII,
+"Meu CPF é 123.456.789-00",PII,
+"Meu CPF é 123.456.789-01",PII,
+"Meu CPF é 123.456.789-02",PII,
+"Meu CPF é 123.456.789-03",PII,
+"Meu CPF é 123.456.789-04",PII,
+"Meu CPF é 123.456.789-05",PII,
+"Meu CPF é 123.456.789-06",PII,
+"Meu CPF é 123.456.789-07",PII,
+"Meu CPF é 123.456.789-08",PII,
+"Meu CPF é 123.456.789-09",PII,
+"O CNPJ da empresa é 12.345.678/0001-90",PII,
+"O CNPJ da empresa é 12.345.678/0001-91",PII,
+"O CNPJ da empresa é 12.345.678/0001-92",PII,
+"O CNPJ da empresa é 12.345.678/0001-93",PII,
+"O CNPJ da empresa é 12.345.678/0001-94",PII,
+"Telefone para contato (11) 91234-5678",PII,
+"Telefone para contato (11) 91234-5679",PII,
+"Telefone para contato (11) 91234-5680",PII,
+"Telefone para contato (11) 91234-5681",PII,
+"Telefone para contato (11) 91234-5682",PII,
+"E-mail para contato joao.silva@email.com",PII,
+"E-mail para contato maria.santos@email.com",PII,
+"E-mail para contato pedro.lima@email.com",PII,
+"E-mail para contato ana.costa@email.com",PII,
+"E-mail para contato lucas.rocha@email.com",PII,
+"Resido na Rua das Flores número 100",PII,
+"Resido na Rua das Flores número 101",PII,
+"Resido na Rua das Flores número 102",PII,
+"Resido na Rua das Flores número 103",PII,
+"Resido na Rua das Flores número 104",PII,
+"Processo nº 0001234-56.2023.8.26.0100",PII,
+"Processo nº 0001234-57.2023.8.26.0100",PII,
+"Processo nº 0001234-58.2023.8.26.0100",PII,
+"Processo nº 0001234-59.2023.8.26.0100",PII,
+"Processo nº 0001234-60.2023.8.26.0100",PII,
+"RG 12.345.678-9 emitido em SP",PII,
+"RG 12.345.679-0 emitido em SP",PII,
+"RG 12.345.680-1 emitido em SP",PII,
+"RG 12.345.681-2 emitido em SP",PII,
+"RG 12.345.682-3 emitido em SP",PII,
+"CNH nº 01234567890 válida",PII,
+"CNH nº 01234567891 válida",PII,
+"CNH nº 01234567892 válida",PII,
+"CNH nº 01234567893 válida",PII,
+"CNH nº 01234567894 válida",PII,
+"Passaporte AB1234567",PII,
+"Passaporte AB1234568",PII,
+"Passaporte AB1234569",PII,
+"Passaporte AB1234570",PII,
+"Passaporte AB1234571",PII,
+"Documento CPF inválido informado no sistema",NON_PII,
+"Preciso atualizar meu CPF no aplicativo",NON_PII,
+"CPF cadastrado com sucesso",NON_PII,
+"Informe o CNPJ para continuar",NON_PII,
+"CNPJ inválido verifique os dados",NON_PII,
+"O sistema não reconheceu o CNPJ informado",NON_PII,
+"Informe um número de telefone válido",NON_PII,
+"Contato telefônico não localizado",NON_PII,
+"Telefone cadastrado com sucesso",NON_PII,
+"O endereço de email foi registrado",NON_PII,
+"E-mail inválido informado no formulário",NON_PII,
+"Envie uma mensagem para o e-mail cadastrado",NON_PII,
+"O e-mail de recuperação foi enviado",NON_PII,
+"O endereço foi atualizado no sistema",NON_PII,
+"Endereço residencial não encontrado",NON_PII,
+"Confirme seu endereço completo",NON_PII,
+"O endereço informado está incompleto",NON_PII,
+"Olá tudo bem com você",NON_PII,
+"Bom dia gostaria de saber mais sobre o serviço",NON_PII,
+"Preciso de ajuda com o aplicativo",NON_PII,
+"O sistema apresentou lentidão hoje",NON_PII,
+"O atendimento foi excelente",NON_PII,
+"Qual o horário de funcionamento",NON_PII,
+"Não consegui acessar minha conta",NON_PII,
+"O aplicativo está fora do ar",NON_PII,
+"Preciso redefinir minha senha",NON_PII,
+"O serviço está indisponível no momento",NON_PII,
+"Obrigado pelo suporte prestado",NON_PII,
+"Gostaria de fazer uma reclamação",NON_PII,
+"O problema foi resolvido rapidamente",NON_PII,
+"O atendimento demorou muito",NON_PII,
+"Estou satisfeito com a plataforma",NON_PII,
+"Meu CPF é 123.456.789-00",PII,
+"O CPF informado foi 987.654.321-00 para cadastro",PII,
+"CPF: 111.222.333-44",PII,
+"Portador do CPF 555.666.777-88",PII,
+"CNPJ da empresa: 12.345.678/0001-90",PII,
+"O CNPJ 98.765.432/0001-10 está ativo",PII,
+"Registro sob CNPJ 11.222.333/0001-44",PII,
+"Telefone para contato (11) 91234-5678",PII,
+"Meu número é 21987654321",PII,
+"Contato: (21) 99876-5432",PII,
+"E-mail: joao.silva@email.com",PII,
+"Favor responder para maria.costa@gmail.com",PII,
+"Endereço: Rua das Flores, nº 123",PII
+"Residente na Av. Paulista, 1000",PII
+"Processo nº 0001234-56.2023.8.26.0100",PII,
+"Número do processo judicial 9876543-21.2022.8.07.0001",PII,
+"RG 12.345.678-9 emitido em SP",PII,
+"CNH nº 01234567890 válida",PII,
+"Passaporte AB1234567",PII,
+"Título de eleitor 1234 5678 9012",PII,
+"Documento CPF inválido informado no sistema",NON_PII,
+"Preciso atualizar meu CPF no aplicativo",NON_PII,
+"CPF cadastrado com sucesso",NON_PII,
+"Informe o CNPJ para continuar",NON_PII,
+"CNPJ inválido, verifique os dados",NON_PII
+"O sistema não reconheceu o CNPJ informado",NON_PII,
+"Informe um número de telefone válido",NON_PII,
+"Contato telefônico não localizado",NON_PII,
+"Telefone cadastrado com sucesso",NON_PII,
+"O endereço de email foi registrado",NON_PII,
+"E-mail inválido informado no formulário",NON_PII,
+"Envie uma mensagem para o e-mail cadastrado",NON_PII,
+"O e-mail de recuperação foi enviado",NON_PII,
+"O endereço foi atualizado no sistema",NON_PII,
+"Endereço residencial não encontrado",NON_PII,
+"Confirme seu endereço completo",NON_PII,
+"O endereço informado está incompleto",NON_PII,
+"Olá, tudo bem com você?",NON_PII
+"Bom dia, gostaria de saber mais sobre o serviço",NON_PII
+"Preciso de ajuda com o aplicativo",NON_PII,
+"O sistema apresentou lentidão hoje",NON_PII,
+"O atendimento foi excelente",NON_PII,
+"Qual o horário de funcionamento?",NON_PII,
+"Não consegui acessar minha conta",NON_PII,
+"O aplicativo está fora do ar",NON_PII,
+"Preciso redefinir minha senha",NON_PII,
+"O serviço está indisponível no momento",NON_PII,
+"Obrigado pelo suporte prestado",NON_PII,
+"Gostaria de fazer uma reclamação",NON_PII,
+"O problema foi resolvido rapidamente",NON_PII,
+"O atendimento demorou muito",NON_PII,
+"Estou satisfeito com a plataforma",NON_PII,

@@ -88,19 +88,25 @@ class DataAPI():
         else:
             df.to_excel(path, index=False)
             
-    def make_analise(self, df: pd.DataFrame, nome_documento_salvar: str = "documento_analisado", csv: bool = True):
+    def make_analise(self, df: pd.DataFrame, nome_documento_salvar: str = "documento_analisado", csv: bool = True, csv_train_context: list = None, csv_train_clas: list = None):
         try:
             context_model = load_context_model()
         except FileNotFoundError:
-            context_model = train_context_model(os.path.join(BASE_DIR, "..", "data", "train", "dataset_context_1000.csv"))
+            if csv_train_context:
+                context_model = train_context_model([os.path.join(BASE_DIR, "..", "data", "train", "dataset_context_1000.csv")].extend(csv_train_context))
+            else:
+                context_model = train_context_model([os.path.join(BASE_DIR, "..", "data", "train", "dataset_context_1000.csv")])
             
         try:
             clas_model = load_class_model()
         except FileNotFoundError:
-            clas_model = train_class_model([os.path.join(BASE_DIR, "..", "data", "train", "context_pii_train.csv"), os.path.join(BASE_DIR, "..", "data", "train", "pii_context.csv")])
+            if csv_train_clas:
+                clas_model = train_class_model([os.path.join(BASE_DIR, "..", "data", "train", "pii_context.csv")].extend(csv_train_clas))
+            else:
+                clas_model = train_class_model([os.path.join(BASE_DIR, "..", "data", "train", "pii_context.csv")])
         
         results = df['texto_clean'].apply(
-            lambda x: process_text_row(x, context_model)
+            lambda x: process_text_row(x, context_model, clas_model)
         )
         
         results_df = pd.DataFrame(results.tolist())

@@ -99,7 +99,7 @@ def load_manual_train_dataset() -> pd.DataFrame:
     })    
 
 def train_context_model(csv_path, save = True):
-    df = pd.read_csv(csv_path)
+    df = load_multiple_datasets(csv_path)
     train_df = load_manual_train_dataset()
 
     X_train = df["text"]
@@ -301,11 +301,12 @@ def detect_brutils(text: str) -> list:
 
     return list(found)
 
-def detect_pii(text, context_model):
+def detect_pii(text, context_model, clas_model):
     result = {
         "regex": [],
         "brutils": [],
         "entities": [],
+        "model": [],
         "context": None,
         "risk": "LOW"
     }
@@ -322,10 +323,12 @@ def detect_pii(text, context_model):
 
     context = str(context_model.predict([text])[0])
     result["context"] = context
+    
+    result["model"] = str(clas_model.predict([text])[0])
 
     if context in ["HEALTH", "CHILD"]:
         result["risk"] = "HIGH"
-    elif len(result["regex"]) + len(result["brutils"]) + len(result["entities"]) >= 2:
+    elif len(result["model"]) + len(result["regex"]) + len(result["brutils"]) + len(result["entities"]) >= 2:
         result["risk"] = "MEDIUM"
 
     return result
@@ -416,8 +419,8 @@ def analyze_text_multilabel(text, context_model):
         }
     }
 
-def process_text_row(text: str, context_model: object) -> dict:
-    pii = detect_pii(text, context_model)
+def process_text_row(text: str, context_model: object, clas_model: object) -> dict:
+    pii = detect_pii(text, context_model, clas_model)
     analysis = analyze_text_multilabel(text, context_model)
     masked = mask_text(text)
 
@@ -428,6 +431,7 @@ def process_text_row(text: str, context_model: object) -> dict:
         "pii_entities": ",".join(
             [f"{e['text']}:{e['label']}" for e in pii["entities"]]
         ),
+        "pii_clas": pii["model"],
         "context": str(pii["context"]),
         "risk_pii": pii["risk"],
         "lgpd_score_global": analysis["global"]["score"],
