@@ -1,0 +1,25 @@
+{
+  "projectName": "Desafio-Participa-DF",
+  "projectOwner": "bernardoxdev",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "bernardoxdev",
+      "name": "Bernardo de Castro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69211132?v=4",
+      "profile": "https://github.com/bernardoxdev",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}
