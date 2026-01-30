@@ -148,3 +148,72 @@ Accuracy Média: 0.59
     Já quando vamos falar sobre o mascaramento do texto estamos falando do nosso 1° modelo + REGEX + Spacy, os 3 fazem uma junção onde identificam as partes do texto que são dados válidos retornando mascarado. Por exemplo:
 
 `"meu nome é walter rodrigues cruz, no dia 25..." -> "meu nome é [NOME], no dia 25..."`
+
+# Rodar o programa:
+
+## Criar o ambiente virtual (venv):
+
+```
+python3 -m venv venv
+```
+
+---
+
+## Ativar o ambiente virtual:
+
+### Linux:
+
+```
+source venv/bin/activate
+```
+
+### MacOs:
+
+```
+source venv/bin/activate
+```
+
+### Windows (Powershell):
+
+```
+venv\Scripts\Activate.ps1
+```
+
+### Windows (CMD):
+
+```
+venv\Scripts\activate
+
+```
+
+---
+
+## Instalar dependências do projeto:
+
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+---
+
+## Baixar modelo de linguagem:
+
+```
+python3 -m spacy download pt_core_news_lg
+
+```
+
+---
+
+## Executar o projeto:
+
+```
+python3 backend/main.py
+```
+
+---
+
+## Abrir interface:
+
+Para abrir a interface acesse o link: [http://localhost:5000](http://localhost:5000)
