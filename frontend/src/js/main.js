@@ -64,3 +64,77 @@ form.addEventListener("submit", async (event) => {
         status.innerText = "Erro de conexão ❌";
     }
 });
+
+document.getElementById("uploadContext").addEventListener("click", async () => {
+    const fileInput = document.getElementById("fileInputContext");
+    const status = document.getElementById("statusContext");
+
+    if (fileInput.files.length === 0) {
+        status.innerText = "Selecione um arquivo.";
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+
+    try {
+        const response = await fetch("/uploadContext", {
+            method: "POST",
+            body: formData
+        });
+
+        let data = {};
+        const contentType = response.headers.get("content-type");
+
+        if (contentType && contentType.includes("application/json")) {
+            data = await response.json();
+        }
+
+        if (response.ok) {
+            status.innerText = "Upload realizado com sucesso ✅";
+        } else {
+            status.innerText = data.error || `Erro ${response.status}`;
+        }
+
+    } catch (err) {
+        console.error(err);
+        status.innerText = "Erro de conexão ❌";
+    }
+});
+
+document.getElementById("uploadClassificacao").addEventListener("click", async () => {
+    const fileInput = document.getElementById("fileInputClas");
+    const status = document.getElementById("statusClas");
+
+    if (fileInput.files.length === 0) {
+        status.innerText = "Selecione um arquivo.";
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+
+    try {
+        const response = await fetch("/uploadClas", {
+            method: "POST",
+            body: formData
+        });
+
+        let data = {};
+        const contentType = response.headers.get("content-type");
+
+        if (contentType && contentType.includes("application/json")) {
+            data = await response.json();
+        }
+
+        if (response.ok) {
+            status.innerText = "Upload realizado com sucesso ✅";
+        } else {
+            status.innerText = data.error || `Erro ${response.status}`;
+        }
+
+    } catch (err) {
+        console.error(err);
+        status.innerText = "Erro de conexão ❌";
+    }
+});
