@@ -2,8 +2,7 @@
 
 ## Autores
 
-- https://github.com/bernardoxdev [IA]
-- https://github.com/Diegovsky [Web]
+- https://github.com/bernardoxdev [IA e Web]
 - https://github.com/Qaddish [Web]
 
 ## O desafio: Desenvolver um modelo capaz de identificar automaticamente pedidos públicos que contenham dados pessoais.
@@ -29,7 +28,7 @@ Foi disponibilizado um modelo dos dados que está disponível dentro de `backend
 - Número de matrícula funcional
 - Dados jurídicos e criminais
 
-    Iremos utilizar como camadas da solução híbrida o seguinte:
+  Iremos utilizar como camadas da solução híbrida o seguinte:
 
 ```
 Texto
