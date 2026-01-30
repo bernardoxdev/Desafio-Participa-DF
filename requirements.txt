@@ -6,3 +6,4 @@ brutils
 openpyxl
 spacy
 joblib
+flask
