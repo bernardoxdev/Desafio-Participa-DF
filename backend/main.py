@@ -22,6 +22,8 @@ app.static_url_path = '/static'
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", "dev-secret")
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+app.config["TRAIN_CLAS_FOLDER"] = TRAIN_CLAS_FOLDER
+app.config["TRAIN_CONTEXT_FOLDER"] = TRAIN_CONTEXT_FOLDER
 
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
 
@@ -83,8 +85,42 @@ def upload():
         "contexto": arquivos_contexto,
         "classificacao": arquivos_classificacao
     }, 200
-    
-# TODO: Criar upload para context e clas train
+
+@app.route("/uploadContext", methods=["POST"])
+def upload():
+    if "file" not in request.files:
+        return {"error": "Arquivo não enviado"}, 400
+
+    file = request.files["file"]
+
+    if file.filename == "":
+        return {"error": "Arquivo inválido"}, 400
+
+    if not allowed_file(file.filename):
+        return {"error": "Tipo de arquivo não permitido"}, 403
+
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(app.config["TRAIN_CONTEXT_FOLDER"], filename))
+
+    return {"message": "Upload realizado com sucesso"}, 200
+
+@app.route("/uploadClas", methods=["POST"])
+def upload():
+    if "file" not in request.files:
+        return {"error": "Arquivo não enviado"}, 400
+
+    file = request.files["file"]
+
+    if file.filename == "":
+        return {"error": "Arquivo inválido"}, 400
+
+    if not allowed_file(file.filename):
+        return {"error": "Tipo de arquivo não permitido"}, 403
+
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(app.config["TRAIN_CLAS_FOLDER"], filename))
+
+    return {"message": "Upload realizado com sucesso"}, 200
 
 if __name__ == "__main__":
     # app = DataAPI()
